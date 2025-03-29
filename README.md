@@ -189,7 +189,7 @@ redis_crud_tasks/
 
 ---
 
-## **🔹 Key Adjustments**
+## **🔹 Key Features**
 ✅ **Vite + TypeScript** setup  
 ✅ **Organized API Calls** in `/src/api/`  
 ✅ **Reusable Components** under `/src/components/`  
