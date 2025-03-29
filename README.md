@@ -121,3 +121,82 @@ redis_crud_tasks/
 - **Retrieve Task**: `GET /api/tasks/{id}/`
 - **Update Task**: `PUT /api/tasks/{id}/`
 - **Delete Task**: `DELETE /api/tasks/{id}/`
+
+Here's the **frontend project structure** for building the **Vue 3 + TypeScript + Vite** setup, aligning with your **backend structure** while following best practices:
+
+---
+
+## **📂 Project Structure (Frontend)**
+```
+redis_crud_tasks/
+│── backend/                          # Django Backend (unchanged)
+│── frontend/                         # Frontend (Vue 3 + TypeScript + Vite)
+│   │── public/                        # Static assets
+│   │   │── favicon.ico
+│   │── src/                           # Main frontend source code
+│   │   │── api/                       # API requests
+│   │   │   │── auth.ts                # Authentication API calls
+│   │   │   │── tasks.ts               # Task CRUD API calls
+│   │   │── assets/                    # Static assets like images & styles
+│   │   │── components/                # Reusable Vue components
+│   │   │   │── auth/
+│   │   │   │   │── Login.vue
+│   │   │   │   │── Register.vue
+│   │   │   │── tasks/
+│   │   │   │   │── TaskItem.vue        # Single task component
+│   │   │   │   │── TaskList.vue        # Task list rendering
+│   │   │   │   │── AddTask.vue         # Add new task form
+│   │   │   │── ui/
+│   │   │   │   │── Button.vue          # Reusable button component
+│   │   │   │   │── Modal.vue           # Reusable modal component
+│   │   │── composables/                # Vue composables (reusable logic)
+│   │   │   │── useAuth.ts              # Handle authentication state
+│   │   │   │── useTasks.ts             # Manage task state
+│   │   │   │── useFetch.ts             # Fetch wrapper for API calls
+│   │   │── layouts/                    # Page layouts
+│   │   │   │── DefaultLayout.vue       # Base layout with navbar/sidebar
+│   │   │   │── AuthLayout.vue          # Layout for login/register pages
+│   │   │── pages/                      # Application pages
+│   │   │   │── Home.vue
+│   │   │   │── Dashboard.vue
+│   │   │   │── Tasks.vue
+│   │   │── router/                     # Vue Router setup
+│   │   │   │── index.ts                # Routes definition
+│   │   │── store/                      # Pinia state management
+│   │   │   │── auth.ts                 # Authentication store
+│   │   │   │── tasks.ts                # Task store
+│   │   │── styles/                     # Global styles
+│   │   │   │── main.css
+│   │   │   │── variables.css
+│   │   │── utils/                      # Utility functions/helpers
+│   │   │   │── formatDate.ts           # Date formatting helper
+│   │   │   │── validateForm.ts         # Form validation helper
+│   │   │── App.vue                     # Main application entry point
+│   │   │── main.ts                     # Vue app initialization
+│   │── .env                            # Environment variables
+│   │── index.html                      # Main HTML file
+│   │── package.json                    # Project dependencies
+│   │── tsconfig.json                    # TypeScript configuration
+│── scripts/
+│   │── seed_db.py                      # Backend: Seed database script
+│   │── redis_test.py                    # Backend: Redis test script
+│── requirements.txt                     # Backend dependencies
+│── Dockerfile                           # Dockerfile for frontend & backend
+│── docker-compose.yml                   # Docker Compose for full stack
+│── manage.py                             # Django management script
+│── README.md                             # Project documentation
+```
+
+---
+
+## **🔹 Key Adjustments**
+✅ **Vite + TypeScript** setup  
+✅ **Organized API Calls** in `/src/api/`  
+✅ **Reusable Components** under `/src/components/`  
+✅ **Vue Composables** for reusable logic (`useAuth.ts`, `useTasks.ts`)  
+✅ **Pinia State Management** for authentication & tasks (`store/`)  
+✅ **Vue Router Setup** (`router/index.ts`)  
+✅ **Global Styles & Utilities** (`styles/`, `utils/`)  
+✅ **Layouts for UI Consistency** (`layouts/`)  
+
+---
